@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+    
+    
+    <TextView
+        android:id="@+id/ucpnSlmt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+        android:text="Selamat Malam, Wahhab Tech"
+        android:layout_marginHorizontal="20dp"/>
+
+    <ImageView
+        android:id="@+id/logoBni"
+        android:layout_width="170dp"
+        android:layout_height="120dp"
+        android:src="@drawable/logo_bank_bni"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ucpnSlmt"
+        android:layout_marginHorizontal="20dp"/>
+
+    <TextView
+        android:id="@+id/saldo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Saldo"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/logoBni"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="20dp"/>
+    
+    <View
+        android:id="@+id/line1"
+        android:layout_width="50dp"
+        android:layout_height="1dp"
+        android:background="@color/orange"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saldo"
+        android:layout_marginHorizontal="20dp"
+        />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/blackDark"
+        app:layout_constraintStart_toEndOf="@id/line1"
+        app:layout_constraintTop_toBottomOf="@+id/saldo"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginStart="70dp"/>
+    
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardBank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp"
+        android:backgroundTint="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/nameWahhab"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:text="WAHHAB AWALUDIN"/>
+
+            <TextView
+                android:id="@+id/noRekening"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/nameWahhab"
+                android:text="BNI Taplus Muda | 7263-5272-0282-****"/>
+
+            <ImageView
+                android:id="@+id/downnn"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/baseline_keyboard_arrow_down_24"
+                app:layout_constraintStart_toEndOf="@+id/noRekening"
+                app:layout_constraintTop_toTopOf="@id/noRekening"
+                />
+
+            <ImageView
+                android:id="@+id/imageCopy"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:layout_constraintStart_toEndOf="@id/noRekening"
+                app:layout_constraintTop_toTopOf="@id/nameWahhab"
+                android:src="@drawable/baseline_content_copy_24"
+                android:layout_marginStart="120dp"/>
+            
+            <TextView
+                android:id="@+id/saldooAsli"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/noRekening"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginHorizontal="20dp"
+                android:text="Rp ********"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"/>
+
+            <ImageView
+                android:id="@+id/eyeee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/noRekening"
+                app:layout_constraintStart_toEndOf="@id/saldooAsli"
+                android:layout_marginHorizontal="20dp"
+                android:src="@drawable/eye_cross"
+                android:layout_marginTop="20dp"/>
+
+            <Button
+                android:id="@+id/tarikTunai"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="Tarik Tunai"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/saldooAsli"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/orange"/>
+
+            <Button
+                android:id="@+id/setorTunai"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="Setor Tunai"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/saldooAsli"
+                app:layout_constraintStart_toEndOf="@id/tarikTunai"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/orange" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/shortcut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/cardBank"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Shortcut Kamu"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="15dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnShortcut1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardElevation="2dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shortcut"
+        android:layout_marginHorizontal="20dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/transfer_1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Transfer Uang"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnShortcut2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardElevation="2dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@id/btnShortcut1"
+        app:layout_constraintTop_toBottomOf="@id/shortcut"
+        android:layout_marginHorizontal="15dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/transfer_2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Virtual Account"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnShortcut3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardElevation="2dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnShortcut1"
+        android:layout_marginHorizontal="20dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/transfer_3"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pulsa / Data"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnShortcut4"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="2dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@id/btnShortcut1"
+        app:layout_constraintTop_toBottomOf="@id/btnShortcut2"
+        android:layout_marginHorizontal="15dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/transfer_4"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Virtual Account"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/insightBni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnShortcut4"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Insight BNI"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"/>
+
+   <HorizontalScrollView
+       app:layout_constraintTop_toBottomOf="@+id/insightBni"
+       app:layout_constraintStart_toStartOf="parent"
+       android:layout_marginHorizontal="20dp"
+       android:id="@+id/scrollHorizonal"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="5dp">
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/rect47"/>
+
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="20dp"
+               android:src="@drawable/rect48"/>
+
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="20dp"
+               android:src="@drawable/rect49"/>
+
+
+       </LinearLayout>
+   </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
